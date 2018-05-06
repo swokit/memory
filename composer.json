@@ -1,0 +1,27 @@
+{
+  "name": "swoole-kit/memory",
+  "type": "library",
+  "description": "some memory table tool library of the swoole",
+  "keywords": ["library","tool","php"],
+  "homepage": "https://github.com/swoole-kit/memory",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "inhere",
+      "email": "in.798@qq.com",
+      "homepage": "http://www.yzone.net/"
+    }
+  ],
+  "require": {
+    "php": ">7.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SwooleKit\\Memory\\" : "src/"
+    }
+  },
+  "suggest": {
+    "inhere/server": "Use swoole server quickly and easily",
+    "inhere/console": "a lightweight php console application library."
+  }
+}
