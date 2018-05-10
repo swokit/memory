@@ -48,9 +48,12 @@ class SwooleCache implements CacheInterface
         if ($this->has($key)) {
             $row = $this->table->get($key);
 
-            if (\time() > $row['eTime']) {
+            if (\time() >= $row['eTime']) {
                 return \unserialize($row['value'], ['allowed_classes' => false]);
             }
+            
+            // delete expired
+            $this->table->del($key);
         }
 
         return $default;
@@ -84,7 +87,7 @@ class SwooleCache implements CacheInterface
     /**
      * @param string $key
      * @param mixed $value
-     * @param null $ttl
+     * @param null $ttl life time
      * @return bool
      */
     public function set($key, $value, $ttl = null): bool
