@@ -4,6 +4,13 @@ swoole memory 工具的一些封裝
 
 > 快速方便的使用swoole server [inhere/server](https://github.com/inhere/php-server)
 
+主要包含有：
+
+- 一个语言管理类
+- 内存表使用封装(除了基本的 get/set/del 增加了数据导出和恢复，简单的字段搜索)
+- 当使用多个内存表时，可以使用 `MemoryDB` 来管理
+- 一个使用swoole table的缓存类实现，PSR 16
+
 ## install
 
 ```bash
@@ -35,7 +42,8 @@ $userTable->save('key', [
     'password' => 'string',
 ]);
 
-$row = $userTable->find('key');
+$row = $userTable->get('key');
+$password = $userTable->get('key', 'password');
 ```
 
 ## license
