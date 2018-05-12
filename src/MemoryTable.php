@@ -68,7 +68,7 @@ class MemoryTable implements \Countable
 
     // 搜索时将要清理的字符
     const INVALID_CHARS = [
-        ' ', '\\', '/', ',', '.', ';', ':', '?', '`', '!', '@', '#', '$', '%', '^', '&', '*',
+        '\\', '/', ',', '.', ';', ':', '?', '`', '!', '@', '#', '$', '%', '^', '&', '*',
         "\n", "\r\n", "\r", "\t",
         // 中文符号
         '，', '。', '、', '？', '；', '：'
@@ -159,17 +159,7 @@ class MemoryTable implements \Countable
      * @param string|null $field
      * @return mixed
      */
-    public function find(string $key, string $field = null)
-    {
-        return $this->query($key, $field);
-    }
-
-    /**
-     * @param string $key
-     * @param string|null $field
-     * @return mixed
-     */
-    public function query(string $key, string $field = null)
+    public function get(string $key, string $field = null)
     {
         return $this->table->get($key, $field);
     }
@@ -179,7 +169,7 @@ class MemoryTable implements \Countable
      * @param string|null $field
      * @return array
      */
-    public function findAll(array $keys, string $field = null): array
+    public function getMulti(array $keys, string $field = null): array
     {
         $values = [];
 
@@ -242,7 +232,7 @@ class MemoryTable implements \Countable
 
         if (!$field = $opts['searchField']) {
             return [
-                'message' => 'option setting is error!',
+                'message' => 'Option setting is error!',
             ];
         }
 
