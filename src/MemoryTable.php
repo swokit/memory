@@ -6,14 +6,14 @@
  * Time: 12:59
  */
 
-namespace SwooleKit\Memory;
+namespace SwoKit\Memory;
 
 use Swoole\Async;
 use Swoole\Table;
 
 /**
  * Class MemoryTable
- * @package SwooleKit\Memory
+ * @package SwoKit\Memory
  * @link https://wiki.swoole.com/wiki/page/256.html
  *
  * Table使用共享内存来保存数据，在创建子进程前，务必要执行Table->create()

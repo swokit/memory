@@ -6,11 +6,11 @@
  * Time: 13:01
  */
 
-namespace SwooleKit\Memory;
+namespace SwoKit\Memory;
 
 /**
  * Class MemoryDB - memory table manager
- * @package SwooleKit\Memory
+ * @package SwoKit\Memory
  */
 class MemoryDB implements \Countable
 {

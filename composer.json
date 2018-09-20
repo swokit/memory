@@ -1,9 +1,9 @@
 {
-  "name": "swoole-kit/memory",
+  "name": "swokit/memory",
   "type": "library",
   "description": "some memory table tool library of the swoole",
   "keywords": ["library","tool","php"],
-  "homepage": "https://github.com/swoole-kit/memory",
+  "homepage": "https://github.com/swokit/memory",
   "license": "MIT",
   "authors": [
     {
@@ -17,7 +17,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SwooleKit\\Memory\\" : "src/"
+      "SwoKit\\Memory\\" : "src/"
     }
   },
   "suggest": {

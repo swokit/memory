@@ -2,7 +2,7 @@
 
 swoole memory 工具的一些封裝
 
-> 快速方便的使用swoole server [inhere/server](https://github.com/inhere/php-server)
+> 快速方便的使用swoole server [swokit/server](https://github.com/swokit/server)
 
 主要包含有：
 
@@ -14,7 +14,7 @@ swoole memory 工具的一些封裝
 ## install
 
 ```bash
-composer require swoole-kit/memory
+composer require swokit/memory
 ```
 
 ## 内存表

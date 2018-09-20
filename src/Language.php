@@ -6,7 +6,7 @@
  * Time: 16:34
  */
 
-namespace SwooleKit\Memory;
+namespace SwoKit\Memory;
 
 use Toolkit\Collection\Collection;
 use Toolkit\Collection\SimpleCollection;

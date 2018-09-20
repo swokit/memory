@@ -6,14 +6,14 @@
  * Time: 17:05
  */
 
-namespace SwooleKit\Memory;
+namespace SwoKit\Memory;
 
 use Psr\SimpleCache\CacheInterface;
 use Swoole\Table;
 
 /**
  * Class SwooleCache
- * @package SwooleKit\Memory
+ * @package SwoKit\Memory
  */
 class SwooleCache implements CacheInterface
 {
@@ -51,7 +51,7 @@ class SwooleCache implements CacheInterface
             if (\time() >= $row['eTime']) {
                 return \unserialize($row['value'], ['allowed_classes' => false]);
             }
-            
+
             // delete expired
             $this->table->del($key);
         }

@@ -10,14 +10,14 @@ date_default_timezone_set('Asia/Shanghai');
 spl_autoload_register(function ($class) {
     $file = null;
 
-    if (0 === strpos($class,'SwooleKit\Memory\Example\\')) {
-        $path = str_replace('\\', '/', substr($class, strlen('SwooleKit\Memory\Example\\')));
+    if (0 === strpos($class,'SwoKit\Memory\Example\\')) {
+        $path = str_replace('\\', '/', substr($class, strlen('SwoKit\Memory\Example\\')));
         $file = dirname(__DIR__) . "/example/{$path}.php";
-    } elseif (0 === strpos($class,'SwooleKit\Memory\Test\\')) {
-        $path = str_replace('\\', '/', substr($class, strlen('SwooleKit\Memory\Test\\')));
+    } elseif (0 === strpos($class,'SwoKit\Memory\Test\\')) {
+        $path = str_replace('\\', '/', substr($class, strlen('SwoKit\Memory\Test\\')));
         $file = __DIR__ . "/{$path}.php";
-    } elseif (0 === strpos($class,'SwooleKit\Memory\\')) {
-        $path = str_replace('\\', '/', substr($class, strlen('SwooleKit\Memory\\')));
+    } elseif (0 === strpos($class,'SwoKit\Memory\\')) {
+        $path = str_replace('\\', '/', substr($class, strlen('SwoKit\Memory\\')));
         $file = dirname(__DIR__) . "/src/{$path}.php";
     }
 
